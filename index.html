@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MINIMAL STORE</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f8f6f1;color:#292820}
+header{padding:25px 8%;display:flex;justify-content:space-between;align-items:center;background:#fff}
+.logo{font-size:24px;font-weight:bold;letter-spacing:3px}
+nav a{margin-left:20px;text-decoration:none;color:#333}
+.hero{text-align:center;padding:85px 20px;background:#e9e4d9}
+.hero h1{font-size:48px;letter-spacing:4px;margin:0 0 15px}
+.hero p{color:#625f56}
+.hero a,.buy{display:inline-block;background:#292820;color:white;padding:13px 25px;text-decoration:none;border:0;cursor:pointer}
+.products{padding:55px 8%;text-align:center}
+.products h2{letter-spacing:3px}
+.items{display:flex;gap:25px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.card{background:white;padding:20px;width:290px;border-radius:8px}
+.pic{height:210px;background:#e9e4d9;display:flex;align-items:center;justify-content:center;font-size:85px}
+.card h3{margin-bottom:8px}
+.price{font-size:22px;font-weight:bold}
+.buy{margin-top:12px;width:100%}
+.buy:hover{background:#625f56}
+.about{text-align:center;padding:45px 15px;background:#e9e4d9}
+footer{text-align:center;padding:25px;background:#292820;color:white}
+#cart{margin-top:15px;font-weight:bold}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">MINIMAL STORE.</div>
+<nav>
+<a href="#home">หน้าแรก</a>
+<a href="#products">สินค้า</a>
+<a href="#about">เกี่ยวกับเรา</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>MINIMAL STORE</h1>
+<p>Simple Style, Better Life.</p>
+<p>แก้วน้ำดีไซน์มินิมอล พกพาง่าย ใช้ได้ทุกวัน</p>
+<a href="#products">เลือกซื้อสินค้า</a>
+</section>
+
+<section class="products" id="products">
+<h2>OUR PRODUCTS</h2>
+<p>สินค้าของเรา</p>
+<div class="items">
+
+<div class="card">
+<div class="pic">🥤</div>
+<h3>Tumbler 500ml</h3>
+<p>แก้วน้ำพกพาขนาด 500 มล.</p>
+<p class="price">199 บาท</p>
+<button class="buy" onclick="order('Tumbler 500ml',199)">สั่งซื้อสินค้า</button>
+</div>
+
+<div class="card">
+<div class="pic">🥤</div>
+<h3>Tumbler 750ml</h3>
+<p>แก้วน้ำพกพาขนาด 750 มล.</p>
+<p class="price">259 บาท</p>
+<button class="buy" onclick="order('Tumbler 750ml',259)">สั่งซื้อสินค้า</button>
+</div>
+
+</div>
+<div id="cart">เลือกสินค้าที่ต้องการได้เลย</div>
+</section>
+
+<section class="about" id="about">
+<h2>ABOUT US</h2>
+<p>MINIMAL STORE มุ่งเน้นสินค้าดีไซน์เรียบง่าย</p>
+<p>ตอบโจทย์การใช้งานในชีวิตประจำวัน</p>
+</section>
+
+<footer>
+<p>MINIMAL STORE © 2026</p>
+<p>Thank you for visiting our store.</p>
+</footer>
+
+<script>
+function order(name,price){
+document.getElementById('cart').innerText=
+'คุณเลือก '+name+' ราคา '+price+' บาท';
+}
+</script>
+</body>
+</html>
